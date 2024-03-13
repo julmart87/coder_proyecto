@@ -741,7 +741,17 @@ que se repite en las 5 paginas*/
 
 @media (max-width:690px) {
     /* Estilos generales */
-    
+    h1 {
+        font-size: 3rem;
+    }
+    /* Estilos del "navegador" */
+    .navegador {
+        padding-left: 50px;
+    }
+    /* Estilos pagina principal */
+    .portada h1 {
+        font-size: 3rem;
+    }
     .texto1Home {
         height: 75rem;
         display: flex;
@@ -753,6 +763,19 @@ que se repite en las 5 paginas*/
     .containerTexto2 {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media (max-width:608px) {
+    /* Seccion "navegador" */
+    .navegador {
+        padding: 0;
+    }
+    .navegador li {
+        margin: 0;
+    }
+    .navegador li a {
+        font-size: .8125rem;
     }
 }
 
@@ -773,7 +796,6 @@ que se repite en las 5 paginas*/
     /* Seccion "Navegador" */
     .navegador {
         margin: 0;
-        padding: 0;
         border-radius: 0;
     }
     .navegador li {
@@ -789,9 +811,6 @@ que se repite en las 5 paginas*/
     /* Pagina principal */
     .portada {
         height: 400px;
-    }
-    .portada h1 {
-        font-size: 3rem;
     }
     .texto1Home {
         height: 87.5rem;
