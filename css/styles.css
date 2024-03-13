@@ -1,0 +1,876 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red;     */
+}
+
+/* Estilos generales */
+
+body {
+    font-family: "Goldman", sans-serif;
+}
+
+h1 {
+    
+    font-family: "Goldman", sans-serif;
+    font-weight: 400;
+    color: #F2F3FD;
+    font-style: normal;
+    font-size: 7rem;
+    text-align: center;
+    text-shadow: 2px 2px 2px gray; 
+}
+
+h2 {
+    color: silver;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+h3 {
+    color: #dbddf6;
+    font-size: 2rem;
+}
+
+p {
+    color: #F2F3FD;
+    font-size: 1.5rem;
+}
+
+a {
+    font-size: 1rem;
+}
+
+
+/* Estilo para portada de pagina principal*/
+.portada {
+    background-image: url("../assets/img/portada.jpg");
+    background-size: cover;
+    color: white;
+    height: 960px;
+    padding-top: 20px;
+}
+
+.portada h1 {
+    font-family: "Goldman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10rem;
+    text-align: center;
+    text-shadow: 2px 2px 2px gray;
+    padding: 15%;
+}
+
+/* Etilo para la "barra de navegacion"
+que se repite en las 5 paginas*/
+.navegador {
+    top: 0;
+    right: 0; 
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px; 
+    margin: 0 50px 0 1200px; 
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.456); 
+    /* display: flex; */
+    transition: all 300ms;
+}
+
+.navegador ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* justify-content: center;  */
+}    
+
+.navegador li {
+    display:inline-block;
+    margin-left: 10px;
+}
+
+.navegador a {
+    font-family: "Goldman", sans-serif;
+    font-weight: 50px;
+    color: white; 
+    text-decoration: none;
+    padding: 15px;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+} 
+
+/** animacion en la barra de navegacion **/
+.navegador:hover {
+    scale: 1;
+    background: rgb(47, 46, 46);
+    box-shadow: 0 0 10px rgb(65, 59, 59);
+}
+
+
+
+/* Estilos para la pagina principal */
+.texto1Home {
+    /* background-color: #365486; */
+    background: linear-gradient(to bottom, #365486 50%, #88A8D9 100%); /* degradado de color */
+    display: flex;
+    width: 100%; 
+    height: 600px;
+    padding: 200px; 
+    justify-content: space-between; 
+    align-items: stretch;  
+}
+
+
+.articleHome1, .articleHome2 {
+    flex: 1; 
+    padding: 20px;
+    text-align: center;
+    margin-left: 20px; 
+}
+
+.articleHome2 ul {
+    font-size: 1.5rem;
+    list-style-type: none;
+    color: #F2F3FD;
+    margin-top: 40px;
+}
+
+
+.homePhoto img {
+    width: 100%;
+    height: 900px;
+    margin-bottom: -5px;
+}
+
+.texto2Home {
+    background-image: url("../assets/img/two.jpg");
+    background-size: cover; 
+    height: 900px;
+}
+
+.texto2Home h2 {
+    padding: 60px 60px;
+}
+
+
+.containerTexto2 {
+    display: flex; /* Utilizamos flexbox */
+    flex-direction: row; /*en direccion de fila */
+    justify-content: space-between; /* Espacio entre los elementos */
+    padding-top: 120px;
+}
+
+.divHome1,
+.divHome2,
+.divHome3 {
+    flex: 1; /* Cada div ocupará el mismo ancho */
+    padding: 20px; /* Espacio interior para un mejor aspecto */
+    background-color: rgba(0, 0, 0, 0.596);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+/* Estilos para el "footer" 
+que se repite en las 5 paginas*/
+.footer {
+    background-color: black;
+    height: 200px;
+    color: white;
+    display: flex;
+}
+    
+.containerFooter1 {
+    width: 50%;
+    display: inline-block;
+}
+
+.containerFooter1 li {
+    display: inline;
+}
+
+.containerFooter1 img {
+    width: 40px;
+    margin: 20px;
+    padding-top: 40px;
+}
+
+.containerFooter2 {
+    width: 50%;
+    display: inline-block;
+    margin-right: 50px;
+    padding-left: 30%;
+}
+
+.containerFooter2 ul {
+    list-style-type: none;
+    margin: 50px;
+}
+
+.containerFooter2 li {
+    margin: 30px;
+}
+
+
+/* Estilos para la pagina n° 2 (historia) */
+
+/* este estilo de header se repite en 4 paginas */
+.header {
+    background-color: rgb(32, 33, 36); 
+    height: 300px;
+    padding-top: 20px;
+}
+
+.sectionHistoria {
+    background-image: url("../assets/img/fondo_1.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 120rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.divHistoria {
+    width: 50%;
+    margin: 20px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.divHistoria video { 
+    width: 700px;
+    height: auto;
+    border-radius: 5%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    align-items: center;
+}
+
+.articleHistoria {
+    width: 50%;
+    display: inline;
+    margin: 20px 60px 20px 20px;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.articleHistoria h2 {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+.articleHistoria p {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 60px 30px 10px 30px;
+    padding: 100px 80px 40px 80px; 
+    height: 70rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Estilos para la pagina n° 3 (multimedia) */
+.sectionMultimedia {
+    background-image: url("../assets/img/fondo_2.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 150rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.galeria {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px; 
+}
+
+.galeria img {
+    width: 500px;
+    height: 350px;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 0 20px rgba(35, 36, 44, 0.5);
+}
+
+.galeria h3 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.videos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border-radius: 20px;
+    overflow: hidden;  */
+    margin-bottom: 150px;
+}
+
+.videos li {
+    list-style-type: none;
+    margin: 30px;
+} 
+
+.videos h3 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px; 
+    }
+
+.videos video {
+    width: 650px;
+    height: auto;
+}
+
+.upperRow, .lowerRow {
+    display: flex;
+}
+
+.upperRow li, .lowerRow li {
+    flex: 1;
+    list-style-type: none;
+}
+
+
+
+/* Estilos para la pagina n° 4 (Paises) */
+.mainPaises {
+    background-image: url("../assets/img/fondo_3.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 150rem;
+}
+
+.mainPaises h2 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.sectionPaises1 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    padding-top: 50px;
+}
+
+.divPaises {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+}
+
+.divPaises p {
+    text-align: center;
+    margin: 5px;
+}
+
+.divPaisesImg {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.divPaisesImg img {
+    width: 400px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.sectionPaises2 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}  
+
+.banderas {
+    width: 50%;
+    height: 50%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 200px; 
+}
+
+.listaBanderas {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 400px;
+}
+
+.banderas li {
+    list-style-type: none;
+}
+
+.banderas img {
+    width: 120px;
+    height: auto;
+    align-items: center;
+    margin-left: 140px;
+}
+
+.banderas h4 {
+    color: #F2F3FD;
+    font-size: 20px;
+    margin-right: 0;
+    text-align: center;
+}
+
+.videoAntartida {
+    width: 50%;
+    padding-top: 300px;
+}
+
+.videoAntartida video {
+    width: 650px;
+    height: auto;
+}
+
+
+ /* Estilos para la pagina n° 5 (Proyecto) */
+
+.mainProyecto {
+    background-image: url("../assets/img/fondo_4.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 120rem;
+}
+
+.sectionProyecto {
+    width: 70%;
+    height: 100%;
+    display:inline-block;
+    
+}
+
+.sectionProyecto p {
+    background-color: rgba(92, 102, 110, 0.533);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 20px;
+    /* padding-top: 100px; */
+    padding: 100px 60px 30px 60px;
+}
+
+.articleProyecto {
+    width: 600px;
+    height: 400px;
+    display: block;
+    margin: 100px;
+}
+
+.articleProyecto h3 {
+    text-align: center;
+    padding-top: 50px;
+    margin: 40px;
+}
+
+
+
+.photos {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    right: 0; 
+    margin: 30px;
+}
+
+.photos img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    box-shadow:  0 5px 5px rgba(0, 0, 0, 0.456);
+}   
+
+
+/** Diseño responsive utilizando Media Queries **/ /* Estandar max-width:1840 */
+
+@media (max-width:1822px) {
+    .navegador {
+        margin: 0 50px 0 1000px;
+        }
+} 
+
+@media (max-width:1676px) {
+    /* seccion navegador */
+    .navegador {
+        margin: 0 50px 0 800px;
+    }
+    /*Pagina 2 (Historia) */
+    .articleHistoria p {
+        height: 80rem; 
+    } 
+    /*Pagina 3 (multimedia) */
+    .galeria img {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media (max-width:1493px) {
+    .articleHistoria p {
+        height: 85rem;
+    }
+    .divHistoria {
+        width: 40%;
+    }
+    .divHistoria video {
+        width: 600px;
+    }
+    .articleHistoria {
+        width: 60%;
+    }
+}
+
+@media (max-width:1440px) {
+    p {
+        font-size: 1.4rem;
+    }
+    
+    .navegador {
+        margin: 0 50px 0 50px;
+        padding-left: 300px; 
+    }
+    /* pagina principal*/
+    .texto1Home {
+        padding: 100px 20px 20px 20px;
+    }
+    /* pagina 2 (Historia) */
+    .divHistoria video {
+        width: 550px;
+    }
+    .articleHistoria {
+        margin-right: 20px;
+    }
+    .articleHistoria p {
+        padding-top: 200px;
+    }
+    /*Pagina 3 (multimedia) */
+    .galeria img {
+        width: 350px;
+        height: 260px;
+    }
+} 
+
+@media (max-width:1270px) {
+    /* pagina 2 (Historia) */
+    .sectionHistoria {
+        flex-direction: column;
+    }
+    .divHistoria {
+        width: 100%;
+        margin: 50px 50px 20px 0px;
+    }
+    
+    .articleHistoria {
+        width: 100%;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+    
+    .articleHistoria p {
+        margin-left: 150px;
+        width: 50rem;
+        height: 75rem;
+    }
+    /*Pagina 3 (multimedia) */
+    
+    .galeria img {
+        width: 260px;
+        height: 180px;
+    }
+    .videos video {
+        width: 550px;
+        height: auto;
+    }
+}
+
+
+@media (max-width:1024px) {
+    h2 {
+        font-size: 2.6rem;
+    }
+    h3 {
+        font-size: 1.9rem;
+    }
+    
+    .navegador {
+        padding-left: 150px;
+    }  
+    .portada h1 {
+        font-size: 5rem;
+    }
+    .articleHome2 li {
+        font-size: 1.3rem;
+    } 
+    /* pagina 2(historia) */
+    .articleHistoria p {
+        margin-left: 100px;
+        width: 50rem;
+        height: 75rem;
+    }
+    /* pagina 3 (multimedia) */
+    .galeria {
+        padding-left: 0;
+    }
+    .galeria img {
+        width: 220px;
+        height: 160px;
+    }
+}
+
+@media (max-width:918px) {
+    /* pagina 2 (Historia) */
+    .articleHistoria p {
+        margin-left: 50px;
+    }
+}
+@media (max-width:850px) {
+    /* pagina 2 (Historia) */
+    .articleHistoria p {
+        width: 43rem;
+    }
+}
+/** tamaño de tablet (Ipod mini) */
+@media (max-width:768px) {
+    /* estilos generales */
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    /* pagina principal */
+    .portada h1 {
+        font-size: 5.5rem;
+    } 
+
+    /* seccion navegador */
+    .navegador {
+        left: 0;
+        margin: 0 10px 0 10px;
+        padding-left: 90px;
+    }
+    .navegador a {
+        font-size: .875rem;
+    }
+
+    /* seccion header */
+    .header h1 {
+        padding-top: 50px;
+    } 
+    
+    .texto1Home {
+        padding: 120px 20px 20px 20px;
+    }
+    .articleHome1, .articleHome2 {
+        margin-top: 10px;
+    }
+    .articleHome2 h3 {
+        padding-top: 20px;
+    }
+    .articleHome2 ul {
+        padding-top: 20px; 
+    }
+    .articleHome2 li {
+        font-size: 1rem;
+    }
+    
+    /* seccion footer */
+    .containerFooter1 img {
+        width: 30px;
+    }
+    .containerFooter2 {
+        padding-left: 20%;
+    }
+    .containerFooter2 li {
+        font-size: .875rem;
+    }
+    .containerFooter2 ul {
+        display: inline;
+        margin: 20px;
+    }
+
+    /* pagina 2 (historia) */
+    .articleHistoria p {
+        width: 38rem;
+        height: 63rem;
+        padding-top: 80px;
+    }
+
+    /*Pagina 3 (multimedia) */
+    .galeria {
+        padding-top: 200px;
+        
+    }
+    .galeria img {
+        width: 200px;
+        height: 150px;
+    }
+    .videos h3 {
+        margin-top: 0;
+    }
+    .videos video {
+        width: 550px;
+        height: auto;
+    }
+}
+
+@media (max-width:659px) {
+
+}
+
+/** Tamaño de mobil */
+
+@media (max-width: 375px) {
+    /* Estilos generales */
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Seccion "Navegador" */
+    .navegador {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+    /* .navegador:hover {
+        transform: scale(1.50);
+    } */
+    .navegador li {
+        margin: 0 0 0 15px;
+        padding: 0px;
+    }
+    .navegador li a {
+        font-size: .8125rem;
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    
+
+    /* Pagina principal */
+    .portada {
+        height: 400px;
+    }
+    .portada h1 {
+        font-size: 3rem;
+    }
+    .texto1Home {
+        height: 1400px;
+    }
+    .texto1Home {
+        display: flex;
+        flex-direction: column;
+    }
+    .articleHome2 li {
+        font-size: 1.2rem;
+    }
+    .homePhoto img {
+        height: 400px;
+    }
+    .texto2Home {
+        height: 1400px;
+    }
+    .containerTexto2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .divHome1,
+    .divHome2,
+    .divHome3, h3 p {
+        text-align: center;
+    }
+    
+
+    /* pagina 2 (Historia) */
+    .sectionHistoria {
+        height: 150rem;
+    }
+    .divHistoria video {
+        width: 22rem;
+    }
+    .articleHistoria p {
+        margin-left: 10px;
+        padding: 60px 15px 30px 15px;
+        width: 22rem;
+        height: 80rem;
+    }
+
+    /* pagina 3 (Multimedia) */
+    
+    .upperRow {
+        display: flex;
+        flex-direction: column;
+    }
+    .lowerRow {
+        display: flex;
+        flex-direction: column;
+    }
+    .galeria {
+        align-items: center;
+    }
+    .videos video {
+        width: 300px;
+    }
+    .footer {
+        height: 300px;
+    }
+    .containerFooter1 {
+        width: 50%;
+    }
+    .containerFooter1 img {
+        margin: 15px;
+    }
+    .containerFooter2 {
+        width: 50%;
+    }
+    .containerFooter2 li {
+        margin: 50px;
+    }
+}
+
+
+
+@media (max-width:361px) {
+    .navegador li {
+        margin: 0 0 0 10px;
+        padding: 0px;
+    }
+}
+
+
+@media (max-width:336px) {
+    .navegador li {
+        margin: 0 0 0 5px;
+        padding: 0px;
+    }
+}
