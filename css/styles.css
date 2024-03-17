@@ -42,6 +42,31 @@ p {
 a {
     font-size: 1rem;
 }
+/* animacion para h2 */
+.animacionH2 {
+    animation: desvanecer 5s ease-in-out infinite alternate;
+}
+@keyframes desvanecer {
+    0% {
+    opacity: 1;
+    }
+    100% {
+    opacity: 0.3;
+    }
+}
+/* animacion para h3 */
+.animacionH3 {
+    animation: agrandar 3s ease-in-out infinite alternate;
+}
+@keyframes agrandar {
+    0% {
+    transform: scale(1);
+    }
+    100% {
+    transform: scale(1.1);
+    }
+}
+
 
 
 /* Estilo para portada de pagina principal*/
@@ -66,23 +91,28 @@ a {
 
 /* aplicando animacion al h1 de pagina principal */
 .animacion1 {
-    animation-name: moverTexto;
-    animation-duration: 6s; /* Duración de la animación en segundos */
-    animation-timing-function: ease-in-out; /* Función de temporización */
-    animation-iteration-count: infinite; /* Repetición infinita */
+    animation: desvanecer 5s ease-in-out infinite alternate; 
 }
-
-@keyframes moverTexto {
+@keyframes desvanecer {
     0% {
-        transform: translateY(0); /* Sin cambio en la posición inicial */
+    opacity: 1;
+    }
+    80% {
+    opacity: 0.3;
+    }
+}
+@keyframes desvanecer {
+    0% {
+    opacity: 1;
     }
     50% {
-        transform: translateY(-10px); /* Mover hacia arriba */
+    opacity: 0.3;
     }
     100% {
-        transform: translateY(0); /* Volver a la posición inicial */
+    opacity: 1;
     }
-}
+} 
+
 
 
 
@@ -205,7 +235,7 @@ que se repite en las 5 paginas*/
 /* Estilos para el "footer" 
 que se repite en las 5 paginas*/
 .footer {
-    background-color: black;
+    background-color: rgba(8, 12, 21, 0.912);
     height: 200px;
     color: white;
     display: flex;
@@ -251,7 +281,8 @@ que se repite en las 5 paginas*/
 
 /* este estilo de header se repite en 4 paginas */
 .header {
-    background-color: rgb(32, 33, 36); 
+    /* background-color: rgb(32, 33, 36);  */
+    background-color: rgba(30, 30, 49, 0.782);
     height: 300px;
     padding-top: 20px;
 }
@@ -700,11 +731,14 @@ que se repite en las 5 paginas*/
     p {
         font-size: 1.2rem;
     }
-    /* pagina principal */
+/* pagina principal */
     
     .portada h1 {
         font-size: 5.5rem;
     } 
+    .animacion1 {
+        animation: none;
+    }
 
     /* seccion navegador */
     .navegador {
