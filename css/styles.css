@@ -63,6 +63,31 @@ a {
     padding: 15%;
 }
 
+
+/* aplicando animacion al h1 de pagina principal */
+.animacion1 {
+    animation-name: moverTexto;
+    animation-duration: 6s; /* Duración de la animación en segundos */
+    animation-timing-function: ease-in-out; /* Función de temporización */
+    animation-iteration-count: infinite; /* Repetición infinita */
+}
+
+@keyframes moverTexto {
+    0% {
+        transform: translateY(0); /* Sin cambio en la posición inicial */
+    }
+    50% {
+        transform: translateY(-10px); /* Mover hacia arriba */
+    }
+    100% {
+        transform: translateY(0); /* Volver a la posición inicial */
+    }
+}
+
+
+
+
+
 /* Etilo para la "barra de navegacion"
 que se repite en las 5 paginas*/
 .navegador {
@@ -215,6 +240,10 @@ que se repite en las 5 paginas*/
 
 .containerFooter2 li {
     margin: 30px;
+}
+.containerFooter2 a {
+    color: white;
+    list-style-type: none;
 }
 
 
