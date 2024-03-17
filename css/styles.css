@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red;     */
+    /* border: 1px solid red;      */
 }
 
 /* Estilos generales */
@@ -73,7 +73,6 @@ que se repite en las 5 paginas*/
     margin: 0 50px 0 1200px; 
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.456); 
-    /* display: flex; */
     transition: all 300ms;
 }
 
@@ -85,6 +84,7 @@ que se repite en las 5 paginas*/
 }    
 
 .navegador li {
+    display: flex;
     display:inline-block;
     margin-left: 10px;
 }
@@ -101,10 +101,16 @@ que se repite en las 5 paginas*/
 /** animacion en la barra de navegacion **/
 .navegador:hover {
     scale: 1;
-    background: rgb(47, 46, 46);
+    background: rgba(69, 47, 47, 0.366);
     box-shadow: 0 0 10px rgb(65, 59, 59);
 }
 
+.navegador #toggle, .navegador label {
+    display: none;
+}
+.navegador label img {
+    width: 35px;
+}
 
 
 /* Estilos para la pagina principal */
@@ -665,19 +671,45 @@ que se repite en las 5 paginas*/
         font-size: 1.2rem;
     }
     /* pagina principal */
+    
     .portada h1 {
         font-size: 5.5rem;
     } 
 
     /* seccion navegador */
     .navegador {
+        position: fixed; 
         left: 0;
-        margin: 0 20px 0 20px;
-        padding-left: 90px;
+        /* margin: 0 20px 0 20px; */
+        margin: 20px;
+        padding-left: 90px; 
     }
     .navegador a {
-        font-size: .875rem;
+        font-size: 1rem;
     }
+    .navegador .menu {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        top: 0;
+    }
+    .navegador ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 0;
+    } 
+    .navegador label {
+        display: inline-flex;
+        cursor: pointer;
+    }
+    .navegador #toggle:checked ~ .menu {
+        height: 100%;
+    }
+    .navegador li {
+        display: block;
+    }
+    
+    
 
     /* seccion header */
     .header h1 {
