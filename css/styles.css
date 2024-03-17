@@ -211,6 +211,7 @@ que se repite en las 5 paginas*/
 
 .texto2Home h2 {
     padding: 60px 60px;
+    
 }
 
 
@@ -866,6 +867,13 @@ que se repite en las 5 paginas*/
     }
 }
 
+@media (max-width:644px) {
+    /* seccion "footer" */
+    .containerFooter1 img {
+        margin: 15px;
+    }
+}
+
 @media (max-width:608px) {
     /* Seccion "navegador" */
     .navegador {
@@ -876,6 +884,10 @@ que se repite en las 5 paginas*/
     }
     .navegador li a {
         font-size: .8125rem;
+    }
+    /* seccion "footer" */
+    .footer {
+        height: 300px;
     }
 }
 
@@ -963,14 +975,8 @@ que se repite en las 5 paginas*/
         width: 300px;
     }
     /* Seccion "footer" */
-    .footer {
-        height: 300px;
-    }
     .containerFooter1 {
         width: 50%;
-    }
-    .containerFooter1 img {
-        margin: 15px;
     }
     .containerFooter2 {
         width: 50%;
