@@ -101,13 +101,14 @@ que se repite en las 5 paginas*/
 /** animacion en la barra de navegacion **/
 .navegador:hover {
     scale: 1;
-    background: rgba(69, 47, 47, 0.366);
+    background: rgba(45, 73, 97, 0.694);
     box-shadow: 0 0 10px rgb(65, 59, 59);
 }
-
+/* aca se oculta el menu desplegable del desktop */
 .navegador #toggle, .navegador label {
     display: none;
 }
+/* img del menu */
 .navegador label img {
     width: 35px;
 }
@@ -684,14 +685,18 @@ que se repite en las 5 paginas*/
         margin: 20px;
         padding-left: 90px; 
     }
-    .navegador a {
-        font-size: 1rem;
-    }
     .navegador .menu {
         width: 100%;
         height: 0;
         overflow: hidden;
         top: 0;
+    }
+    .navegador .menu a {
+        font-size: 1.2rem;
+        
+    }
+    .navegador .menu li {
+        margin: 20px 0 20px 0;
     }
     .navegador ul {
         flex-direction: column;
