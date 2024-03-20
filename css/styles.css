@@ -404,10 +404,118 @@ que se repite en las 5 paginas*/
     width: 100%;
     height: 150rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+}
+.section-galeria {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 8,1fr;
+    grid-template-rows: 6,1fr;
+    grid-template-areas: 
+    ". . . gridT1 gridT1 . . . "
+    ". img1 img1 img2 img2 img3 img3 ."
+    ". img1 img1 img2 img2 img3 img3 ."
+    ". img4 img4 img5 img5 img6 img6 ."
+    ". img4 img4 img5 img5 img6 img6 ."
+    ". . . . . . . ."
+    
+    ;
+}
+.gridT1 {
+    grid-area: gridT1;
+}
+.img1 {
+    grid-area: img1;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.img2 {
+    grid-area: img2;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.img3 {
+    grid-area: img3;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.img4 {
+    grid-area: img4;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.img5 {
+    grid-area: img5;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.img6 {
+    grid-area: img6;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.section-galeria img {
+    width: 28.125rem;
+    height: 20rem;
+    box-shadow: 0 0 20px rgba(35, 36, 44, 0.5);
+    margin-left: 30px;
+}
+.section-galeria h3 {
+    text-align: center;
+    padding-top: 50px;
 }
 
-.galeria {
+.section-videos {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 4,1fr;
+    grid-template-rows: 4,1fr;
+    grid-template-areas: 
+    ". . gridT2 gridT2 . ."
+    ". . vid1 vid1 . ."
+    ". . vid2 vid2 . ."
+    ". . vid3 vid3 . ."
+    ;
+}
+.gridT2 {
+    grid-area: gridT2;
+}
+.vid1 {
+    grid-area: vid1;
+    width: 100%;
+    height: 100%;
+}
+.vid2 {
+    grid-area: vid2;
+    width: 100%;
+    height: 100%;
+}
+.vid3 {
+    grid-area: vid3;
+    width: 100%;
+    height: 100%;
+}
+.section-videos video {
+    width: 34.375rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    justify-self: center;
+    box-shadow: 0 0 20px rgba(35, 36, 44, 0.5);
+}
+.section-videos h3 {
+    text-align: center;
+}
+
+/* .galeria {
     width: 100%;
     flex: 1;
     display: flex;
@@ -421,47 +529,6 @@ que se repite en las 5 paginas*/
     border-radius: 1.25rem;
     margin: 1.25rem;
     box-shadow: 0 0 20px rgba(35, 36, 44, 0.5);
-}
-
-.galeria h3 {
-    text-align: center;
-    margin-top: 3.125rem;
-    margin-bottom: 3.125rem;
-}
-
-.videos {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* border-radius: 20px;
-    overflow: hidden;  */
-    margin-bottom: 9.375rem;
-}
-
-.videos li {
-    list-style-type: none;
-    margin: 1.875rem;
-} 
-
-.videos h3 {
-    text-align: center;
-    margin-top: 3.125rem;
-    margin-bottom: 3.125rem; 
-    }
-
-.videos video {
-    width: 650px;
-    height: auto;
-}
-
-.upperRow, .lowerRow {
-    display: flex;
-}
-
-.upperRow li, .lowerRow li {
-    flex: 1;
-    list-style-type: none;
 }
 
 
@@ -740,6 +807,7 @@ que se repite en las 5 paginas*/
         font-size: 1.1rem;
     }
     
+    /* seccion "navegador" */
     .navegador {
         padding-left: 150px;
     }  
@@ -749,25 +817,7 @@ que se repite en las 5 paginas*/
     .articleHome2 li {
         font-size: 1.3rem;
     } 
-    /* pagina 2(historia) */
-    /* .section-grid {
-        grid-template-columns: repeat(8,1fr);
-        grid-template-rows: repeat(9,1fr);
-        grid-template-areas: 
-        ". . . . . . "
-        ". grid2 grid2 . grid4 grid4 ."
-        ". grid3 . grid4 grid4 ."
-        ". . . grid4 grid4 ."
-        ". . gridH3 gridH3 . . "
-        ". grid5 grid5 grid6 grid7 ."
-        ". grid5 grid5 grid8 grid9"
-        ".grid5 grid5 . . ."
-        ". . . . . ."
-        
-        ; */
-    }
     
-
     /* pagina 3 (multimedia) */
     .galeria {
         padding-left: 0;
