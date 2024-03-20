@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red;      */
+    /* border: 1px solid red;       */
 }
 
 /* Estilos generales */
@@ -250,7 +250,6 @@ a {
 }
 .containerFooter1 {
     width: 50%;
-    display: inline-block;
 }
 .containerFooter1 li {
     display: inline;
@@ -721,11 +720,14 @@ a {
     .grid5 {
         padding: 60px 30px 0 30px;
     } 
-    
     /*Pagina 3 (multimedia) */
     .galeria img {
         width: 350px;
         height: 260px;
+    }
+    /* seccion "footer" */
+    .containerFooter2 {
+        padding-left: 20%;
     }
 } 
 
@@ -737,7 +739,10 @@ a {
     .grid5 {
         padding: 40px 10px 0 10px;
     } 
-    
+    /* seccion "footer" */
+    .containerFooter2 {
+        padding-left: 15%;
+    }
 }
 
 
@@ -763,6 +768,10 @@ a {
     .articleHome2 li {
         font-size: 1.3rem;
     } 
+    /* seccion "footer" */
+    .containerFooter2 {
+        padding-left: 15%;
+    }
     
 }
 
@@ -788,7 +797,9 @@ a {
         ". grid8 grid8 grid9 grid9 ."
         ;
     }
-    
+    .containerFooter2 {
+        padding-left: 10%;
+    }
 }
 
 @media (max-width:821px) {
@@ -880,9 +891,6 @@ a {
     .containerFooter1 img {
         width: 30px;
     }
-    .containerFooter2 {
-        padding-left: 20%;
-    }
     .containerFooter2 li {
         font-size: .875rem;
     }
@@ -939,6 +947,9 @@ a {
 
 @media (max-width:644px) {
     /* seccion "footer" */
+    .containerFooter2 {
+        padding-left: 0;
+    }
     .containerFooter1 img {
         margin: 15px;
     }
@@ -1090,7 +1101,7 @@ a {
 }
 
 /** tamaño (iphone SE) 320px */
-@media (max-width:320px) {
+@media (max-width:321px) {
     /* Estilos generales */
     h1 {
         font-size: 2.6rem;
@@ -1126,4 +1137,30 @@ a {
         width: 19rem;
         height: 65rem;
     }
+    /* Seccion "footer" */
+    .footer {
+        height: 400px;
+        flex-wrap: wrap;
+    }
+    .containerFooter1 {
+        width: 100%;
+        height: 50%;
+        flex-direction: row;
+        padding: 20px;
+    }
+    .containerFooter1 img {
+        width: 30px;
+    }
+    .containerFooter2 {
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        padding: 0;
+    }
+    .containerFooter2 li {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+    }
+    
 }
