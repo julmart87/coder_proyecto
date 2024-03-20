@@ -15,11 +15,24 @@ h1 {
     
     font-family: "Goldman", sans-serif;
     font-weight: 400;
-    color: #F2F3FD;
+    color: #d7d8e7;
     font-style: normal;
     font-size: 7rem;
     text-align: center;
-    text-shadow: 2px 2px 2px gray; 
+    text-shadow: 2px 2px 4px rgb(17, 15, 15);
+    animation: shadowAnimation 2s infinite alternate; 
+}
+/* sombra para los h1 */
+@keyframes shadowAnimation {
+    0% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        text-shadow: 2px 2px 4px rgba(28, 23, 43, 0.992); /* Cambia el color a rojo en el medio de la animación */
+    }
+    100% {
+        text-shadow: 4px 4px 8px rgba(38, 17, 63, 0.962); /* Cambia el color a azul al final de la animación */
+    }
 }
 
 h2 {
@@ -69,12 +82,12 @@ a {
 
 
 
-/* Estilo para portada de pagina principal*/
+/** Estilo para portada de pagina principal*/
 .portada {
     background-image: url("../assets/img/portada.jpg");
     background-size: cover;
     color: white;
-    height: 960px;
+    height: 60rem;
     padding-top: 20px;
 }
 
@@ -84,21 +97,21 @@ a {
     font-style: normal;
     font-size: 10rem;
     text-align: center;
-    text-shadow: 2px 2px 2px gray;
+    text-shadow: 2px 5px 5px rgba(33, 40, 58, 0.756);
     padding: 15%;
 }
 
 
 /* aplicando animacion al h1 de pagina principal */
 .animacion1 {
-    animation: desvanecer 5s ease-in-out infinite alternate; 
+    animation: desvanecer 10s ease-in-out infinite alternate; 
 }
 @keyframes desvanecer {
     0% {
     opacity: 1;
     }
-    80% {
-    opacity: 0.3;
+    100% {
+    opacity: 0.7;
     }
 }
 @keyframes desvanecer {
@@ -114,16 +127,12 @@ a {
 } 
 
 
+/** Etilo para la "barra de navegacion" que se repite en las 5 paginas*/
 
-
-
-
-/* Etilo para la "barra de navegacion"
-que se repite en las 5 paginas*/
 .navegador {
     top: 0;
     right: 0; 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(22, 25, 46, 0.616);
     padding: 12px; 
     margin: 0 50px 0 1200px; 
     border-radius: 20px;
@@ -165,11 +174,11 @@ que se repite en las 5 paginas*/
 }
 /* img del menu */
 .navegador label img {
-    width: 35px;
+    width: 40px;
 }
 
 
-/* Estilos para la pagina principal */
+/** Estilos para la pagina principal */
 .texto1Home {
     /* background-color: #365486; */
     background: linear-gradient(to bottom, #365486 50%, #88A8D9 100%); /* degradado de color */
@@ -180,7 +189,6 @@ que se repite en las 5 paginas*/
     justify-content: space-between; 
     align-items: stretch;  
 }
-
 
 .articleHome1, .articleHome2 {
     flex: 1; 
@@ -214,7 +222,6 @@ que se repite en las 5 paginas*/
     
 }
 
-
 .containerTexto2 {
     display: flex; /* Utilizamos flexbox */
     flex-direction: row; /*en direccion de fila */
@@ -233,42 +240,36 @@ que se repite en las 5 paginas*/
 }
 
 
-/* Estilos para el "footer" 
-que se repite en las 5 paginas*/
+/** Estilos para el "footer" que se repite en las 5 paginas*/
+
 .footer {
     background-color: rgba(8, 12, 21, 0.912);
     height: 200px;
     color: white;
     display: flex;
 }
-    
 .containerFooter1 {
     width: 50%;
     display: inline-block;
 }
-
 .containerFooter1 li {
     display: inline;
 }
-
 .containerFooter1 img {
     width: 40px;
     margin: 20px;
     padding-top: 40px;
 }
-
 .containerFooter2 {
     width: 50%;
     display: inline-block;
     margin-right: 50px;
     padding-left: 30%;
 }
-
 .containerFooter2 ul {
     list-style-type: none;
     margin: 50px;
 }
-
 .containerFooter2 li {
     margin: 30px;
 }
@@ -276,8 +277,6 @@ que se repite en las 5 paginas*/
     color: white;
     list-style-type: none;
 }
-
-
 
 
 /* este estilo de header se repite en 4 paginas */
@@ -288,8 +287,7 @@ que se repite en las 5 paginas*/
     padding-top: 20px;
 }
 
-/* Estilos para la pagina n° 2 (historia) */
-
+/** Estilos para la pagina n° 2 (historia) */
 /* En esta seccion se implementa grids */
 .section-grid {
     background-image: url("../assets/img/fondo_1.jpg");
@@ -317,7 +315,6 @@ que se repite en las 5 paginas*/
     ;
     gap: 10px;
 }
-
 .grid2 {
     grid-area: grid2;
     width: 100%;
@@ -385,7 +382,7 @@ que se repite en las 5 paginas*/
 }
 
 
-/* Estilos para la pagina n° 3 (multimedia) */
+/** Estilos para la pagina n° 3 (multimedia) */
 .sectionMultimedia {
     background-image: url("../assets/img/fondo_2.jpg");
     background-size: cover;
@@ -505,14 +502,13 @@ que se repite en las 5 paginas*/
 
 
 
-/* Estilos para la pagina n° 4 (Paises) */
+/** Estilos para la pagina n° 4 (Paises) */
 .mainPaises {
     background-image: url("../assets/img/fondo_3.jpg");
     background-size: cover;
     width: 100%;
     height: 150rem;
 }
-
 .sectionPaises1 {
     width: 100%;
     height: 40%;
@@ -607,7 +603,7 @@ que se repite en las 5 paginas*/
 }
 
 
- /* Estilos para la pagina n° 5 (Proyecto) */
+ /** Estilos para la pagina n° 5 (Proyecto) */
 
 .mainProyecto {
     background-image: url("../assets/img/fondo_4.jpg");
@@ -615,39 +611,31 @@ que se repite en las 5 paginas*/
     width: 100%;
     height: 120rem;
 }
-
 .sectionProyecto {
     width: 70%;
     height: 100%;
     display:inline-block;
     
 }
-
 .sectionProyecto p {
     background-color: rgba(92, 102, 110, 0.533);
     width: 100%;
     height: 100%;
     text-align: center;
     border-radius: 20px;
-    /* padding-top: 100px; */
     padding: 100px 60px 30px 60px;
 }
-
 .articleProyecto {
     width: 600px;
     height: 400px;
     display: block;
     margin: 100px;
 }
-
 .articleProyecto h3 {
     text-align: center;
     padding-top: 50px;
     margin: 40px;
 }
-
-
-
 .photos {
     width: 30%;
     height: 100%;
@@ -656,7 +644,6 @@ que se repite en las 5 paginas*/
     right: 0; 
     margin: 30px;
 }
-
 .photos img {
     width: 300px;
     height: 300px;
@@ -680,14 +667,15 @@ que se repite en las 5 paginas*/
     .navegador {
         margin: 0 50px 0 800px;
     }
-    /*Pagina 2 (Historia) */
     
+    /*Pagina 2 (Historia) */
     .grid4 {
         padding: 80px 60px 0 60px;
     }
     .grid5 {
         padding: 50px 60px 0 60px;
     } 
+    
     /*Pagina 3 (multimedia) */
     .galeria img {
         width: 400px;
@@ -696,7 +684,6 @@ que se repite en las 5 paginas*/
 }
 
 @media (max-width:1493px) {
-
     /* Estilos de pagina 2 "Historia" */
     .section-grid {
         grid-template-areas:
@@ -718,8 +705,7 @@ que se repite en las 5 paginas*/
 }
 
 @media (max-width:1440px) {
-    
-    
+    /* "Navegador" */
     .navegador {
         margin: 0 50px 0 50px;
         padding-left: 300px; 
@@ -735,7 +721,6 @@ que se repite en las 5 paginas*/
     .grid5 {
         padding: 60px 30px 0 30px;
     } 
-    
     
     /*Pagina 3 (multimedia) */
     .galeria img {
@@ -753,22 +738,11 @@ que se repite en las 5 paginas*/
         padding: 40px 10px 0 10px;
     } 
     
-    
-    
-    /*Pagina 3 (multimedia) */
-    
-    .galeria img {
-        width: 260px;
-        height: 180px;
-    }
-    .videos video {
-        width: 550px;
-        height: auto;
-    }
 }
 
 
-@media (max-width:1024px) {
+@media (max-width:1025px) {
+    /* Estilos genereles */
     h2 {
         font-size: 2.6rem;
     }
@@ -778,11 +752,11 @@ que se repite en las 5 paginas*/
     p {
         font-size: 1.1rem;
     }
-    
     /* seccion "navegador" */
     .navegador {
-        padding-left: 150px;
-    }  
+        padding-left: 160px;
+    } 
+    /* pagina principal */ 
     .portada h1 {
         font-size: 5rem;
     }
@@ -790,14 +764,6 @@ que se repite en las 5 paginas*/
         font-size: 1.3rem;
     } 
     
-    /* pagina 3 (multimedia) */
-    .galeria {
-        padding-left: 0;
-    }
-    .galeria img {
-        width: 220px;
-        height: 160px;
-    }
 }
 
 @media (max-width:918px) {
@@ -806,6 +772,7 @@ que se repite en las 5 paginas*/
         margin-left: 50px;
     }
 }
+
 @media (max-width:850px) {
     /* pagina 2 (Historia) */
     .section-grid {
@@ -823,6 +790,14 @@ que se repite en las 5 paginas*/
     }
     
 }
+
+@media (max-width:821px) {
+    /* seccion "navegador" */
+    .navegador {
+        padding-left: 100px;
+    }  
+}
+
 /** tamaño de tablet (Ipod mini) */
 @media (max-width:769px) {
     /* estilos generales */
@@ -835,9 +810,12 @@ que se repite en las 5 paginas*/
     h3 {
         font-size: 1.6rem;
     }
+    /* seccion header */
+    .header h1 {
+        padding-top: 70px;
+    }  
     
 /* pagina principal */
-    
     .portada h1 {
         font-size: 5.5rem;
     } 
@@ -849,9 +827,9 @@ que se repite en las 5 paginas*/
     .navegador {
         position: fixed; 
         left: 0;
-        /* margin: 0 20px 0 20px; */
         margin: 20px;
         padding-left: 90px; 
+        background-color: rgba(0, 0, 0, 0.168);
     }
     .navegador .menu {
         width: 100%;
@@ -881,14 +859,7 @@ que se repite en las 5 paginas*/
     .navegador li {
         display: block;
     }
-    
-    
-
-    /* seccion header */
-    .header h1 {
-        padding-top: 50px;
-    } 
-    
+    /* Pagina principal */
     .texto1Home {
         padding: 120px 20px 20px 20px;
     }
@@ -919,29 +890,24 @@ que se repite en las 5 paginas*/
         display: inline;
     }
 
-    /* pagina 2 (historia) */
-    .articleHistoria p {
-        width: 38rem;
-        height: 63rem;
-        padding-top: 80px;
-    }
-
-    /*Pagina 3 (multimedia) */
-    .galeria {
-        padding-top: 200px;
-        
-    }
-    .galeria img {
+    /* pagina 2 "historia" */
+    .section-grid img {
         width: 200px;
-        height: 150px;
+        height: 200px;
+        object-fit:cover;
+        justify-content: center;
+        margin-left: 25px;
     }
-    .videos h3 {
-        margin-top: 0;
+    .gridH3 {
+        margin-top: 10px;
     }
-    .videos video {
-        width: 550px;
-        height: auto;
+    .grid2 {
+        margin-top: 10px;
     }
+    .grid3 {
+        align-content: center;
+    }
+    
 }
 
 @media (max-width:690px) {
@@ -1001,6 +967,7 @@ que se repite en las 5 paginas*/
     /* Estilos generales */
     h1 {
         font-size: 3rem;
+        
     } 
     h2 {
         font-size: 1.8rem;
@@ -1008,8 +975,7 @@ que se repite en las 5 paginas*/
     h3 {
         font-size: 1.3rem;
     }
-
-    /* Seccion "Navegador" */
+   /* Seccion "Navegador" */
     .navegador {
         margin: 0;
         border-radius: 0;
@@ -1023,7 +989,6 @@ que se repite en las 5 paginas*/
         margin: 0;
         padding: 0;
     }
-    
     /* Pagina principal */
     .portada {
         height: 400px;
@@ -1045,8 +1010,6 @@ que se repite en las 5 paginas*/
     .divHome3, h3 p {
         text-align: center;
     }
-    
-
     /* pagina 2 (Historia) */
     .sectionHistoria {
         height: 150rem;
@@ -1060,23 +1023,6 @@ que se repite en las 5 paginas*/
         width: 22rem;
         height: 80rem;
         text-align: center;
-    }
-
-    /* pagina 3 (Multimedia) */
-    
-    .upperRow {
-        display: flex;
-        flex-direction: column;
-    }
-    .lowerRow {
-        display: flex;
-        flex-direction: column;
-    }
-    .galeria {
-        align-items: center;
-    }
-    .videos video {
-        width: 300px;
     }
     /* Seccion "footer" */
     .containerFooter1 {
@@ -1116,15 +1062,39 @@ que se repite en las 5 paginas*/
     }
     /* seccion footer */
     .containerFooter1 img {
-        width: 20px;
+        width: 22px;
+    }
+    /* Pagina 2 "Historia" */
+    .section-grid {
+        place-items: center;
+        height: 180rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8fr);
+        grid-template-areas:
+        "grid4"
+        "grid2" 
+        "grid3"
+        "grid6"
+        "grid5"
+        "grid7"
+        "grid8"
+        "grid9"
+        ;
+    }
+    .section-grid img {
+        justify-self: center;
+    }
+    .gridH3 {
+        display: none;
     }
 }
 
-/* tamaño (iphone SE) */
+/** tamaño (iphone SE) 320px */
 @media (max-width:320px) {
     /* Estilos generales */
     h1 {
         font-size: 2.6rem;
+        margin-top: 50px;
     }
     h2 {
         font-size: 1.2rem;
@@ -1134,6 +1104,19 @@ que se repite en las 5 paginas*/
     }
     p {
         font-size: .9375rem;
+    }
+    /* Pagina principal */
+    .portada h1 {
+        margin-top: 70px;
+    }
+    .texto1Home {
+        height: 60rem;
+    }
+    .texto2Home {
+        height: 65rem;
+    }
+    .texto2Home h2 {
+        padding: 50px 20px 0 20px;
     }
     /* Pagina 2 "Historia" */
     .divHistoria video {
