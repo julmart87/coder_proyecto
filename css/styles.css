@@ -666,7 +666,6 @@ a {
     .navegador {
         margin: 0 50px 0 800px;
     }
-    
     /*Pagina 2 (Historia) */
     .grid4 {
         padding: 80px 60px 0 60px;
@@ -674,12 +673,6 @@ a {
     .grid5 {
         padding: 50px 60px 0 60px;
     } 
-    
-    /*Pagina 3 (multimedia) */
-    .galeria img {
-        width: 400px;
-        height: 300px;
-    }
 }
 
 @media (max-width:1493px) {
@@ -720,11 +713,6 @@ a {
     .grid5 {
         padding: 60px 30px 0 30px;
     } 
-    /*Pagina 3 (multimedia) */
-    .galeria img {
-        width: 350px;
-        height: 260px;
-    }
     /* seccion "footer" */
     .containerFooter2 {
         padding-left: 20%;
@@ -772,17 +760,35 @@ a {
     .containerFooter2 {
         padding-left: 15%;
     }
-    
+    /* Pagina 2 "historia" */
+    .section-grid img {
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+    }
+    .grid4 {
+        height:600px;
+        padding-top: 80px;
+    }
+    .grid5 {
+        height: 600px;
+        padding-top: 60px;
+    }
 }
+
 
 @media (max-width:918px) {
     /* pagina 2 (Historia) */
-    .articleHistoria p {
-        margin-left: 50px;
+    .grid5 {
+        height: 800px;
     }
 }
 
 @media (max-width:850px) {
+    /* Pagina principal */
+    .portada h1 {
+        margin-top: 150px;
+    }
     /* pagina 2 (Historia) */
     .section-grid {
         grid-template-columns: repeat(6,1fr);
@@ -797,6 +803,18 @@ a {
         ". grid8 grid8 grid9 grid9 ."
         ;
     }
+    .section-grid h3 {
+        padding-top: 80px;
+    }
+    .grid4 {
+        height: 370px;
+        padding-top: 20px;
+    }
+    .grid5 {
+        height: 300px;
+        padding-top: 20px;
+    }
+    /* Seccion "footer" */
     .containerFooter2 {
         padding-left: 10%;
     }
@@ -1021,20 +1039,6 @@ a {
     .divHome3, h3 p {
         text-align: center;
     }
-    /* pagina 2 (Historia) */
-    .sectionHistoria {
-        height: 150rem;
-    }
-    .divHistoria video {
-        width: 22rem;
-    }
-    .articleHistoria p {
-        margin-left: 10px;
-        padding: 60px 15px 30px 15px;
-        width: 22rem;
-        height: 80rem;
-        text-align: center;
-    }
     /* Seccion "footer" */
     .containerFooter1 {
         width: 50%;
@@ -1091,12 +1095,24 @@ a {
         "grid8"
         "grid9"
         ;
+        gap: 0;
     }
     .section-grid img {
-        justify-self: center;
+        width: 250px;
+        height: 250px;
+        margin: 0;
     }
     .gridH3 {
         display: none;
+    }
+    .grid4 {
+        height: 440px;
+        padding-top: 5px;
+        margin-top: 20px;
+    }
+    .grid5 {
+        height: 320px;
+        padding-top: 5px;
     }
 }
 
@@ -1129,14 +1145,7 @@ a {
     .texto2Home h2 {
         padding: 50px 20px 0 20px;
     }
-    /* Pagina 2 "Historia" */
-    .divHistoria video {
-        width: 19rem;
-    }
-    .articleHistoria p {
-        width: 19rem;
-        height: 65rem;
-    }
+    
     /* Seccion "footer" */
     .footer {
         height: 400px;
