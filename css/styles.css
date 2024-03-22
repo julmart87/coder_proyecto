@@ -605,10 +605,10 @@ a {
  /** Estilos para la pagina n° 5 (Proyecto) */
 
 .mainProyecto {
-    background-image: url("../assets/img/fondo_4.jpg");
+    background-image: url("../assets/img/noche.jpg");
     background-size: cover;
     width: 100%;
-    height: 120rem;
+    height: 130rem;
 }
 .sectionProyecto {
     width: 70%;
